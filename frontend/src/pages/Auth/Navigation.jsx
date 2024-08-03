@@ -37,8 +37,6 @@ const Navigation = () => {
       await logoutApiCall().unwrap();
       dispatch(logout());
       navigate("/login");
-
-
     } catch (error) {
       console.error(error);
     }
@@ -88,14 +86,11 @@ const Navigation = () => {
           onClick={toggleDropdown}
           className="flex items-center text-gray-8000 focus:outline-none"
         >
-            {
-
-                userInfo?(
-                    <span className="text-white">{userInfo.username}</span>
-                ):(<></>)
-            }
-
-
+          {userInfo ? (
+            <span className="text-white">{userInfo.username}</span>
+          ) : (
+            <></>
+          )}
         </button>
       </div>
       <ul>
