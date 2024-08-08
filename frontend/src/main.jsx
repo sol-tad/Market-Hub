@@ -11,6 +11,7 @@ import Register from "./pages/Auth/Register";
 import Profile from "./pages/User/Profile.jsx"
 import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./pages/Admin/AdminRoute.jsx";
+import UserList from "./pages/Admin/UserList.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -24,7 +25,8 @@ const router = createBrowserRouter(
 
       {/* admin route */}
       <Route path="/admin" element={<AdminRoute />}>
-        
+       <Route path="userlist" element={<UserList />}/>
+      
       </Route>
 
     </Route>
