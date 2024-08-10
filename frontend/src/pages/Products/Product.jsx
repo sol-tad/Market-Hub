@@ -6,7 +6,7 @@ import {
   useGetProductDetailsQuery,
   useCreateReviewMutation,
 } from "../../redux/api/productApiSlice";
-import Rating from "./Rating";
+import Rating from "./Ratings";
 import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 import { addToCart } from "../../redux/features/cart/cartSlice";
